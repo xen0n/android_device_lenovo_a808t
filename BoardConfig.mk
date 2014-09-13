@@ -43,7 +43,7 @@ TARGET_BOOTLOADER_BOARD_NAME := a808t
 TARGET_PREBUILT_KERNEL := $(DEVICE_FOLDER)/prebuilt/kernel
 # BOARD_KERNEL_CMDLINE := console=ttyMT3,921600n1 vmalloc=496M slub_max_order=0 lcm=0-nt35521_hd720_dsi_vdo_boe fps=6163 bootprof.pl_t=696 bootprof.lk_t=1208 printk.disable_uart=1
 # BOARD_KERNEL_BASE := 0x10000000
-# BOARD_KERNEL_PAGESIZE := 2048
+BOARD_KERNEL_PAGESIZE := 2048
 
 
 # partition

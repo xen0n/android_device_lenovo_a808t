@@ -63,7 +63,7 @@ bin/thermal
 bin/thermal_manager
 bin/thermald
 
-bin/hald
+#bin/hald  -- this is nonexistent on A808t
 bin/wlan_loader
 bin/wmt_loader
 

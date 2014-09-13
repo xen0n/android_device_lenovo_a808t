@@ -9,7 +9,7 @@
 import /init.usb.rc
 import /init.trace.rc
 
-import /FWUpgradeInit.rc
+#import /FWUpgradeInit.rc
 
 import init.xlog.rc
 
@@ -29,24 +29,6 @@ on early-init
     # BATTERY proc
     chown shell system /proc/mtk_battery_cmd/current_cmd
     chown shell system /proc/mtk_battery_cmd/discharging_cmd
-
-on early_property:ro.build.type=user
-    write /proc/bootprof "INIT: user build setting"
-    export BOOTCLASSPATH /system/framework/core.jar:/system/framework/conscrypt.jar:/system/framework/okhttp.jar:/system/framework/core-junit.jar:/system/framework/bouncycastle.jar:/system/framework/ext.jar:/system/framework/framework.jar:/system/framework/framework2.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/mms-common.jar:/system/framework/android.policy.jar:/system/framework/services.jar:/system/framework/apache-xml.jar:/system/framework/webviewchromium.jar:/system/framework/mediatek-common.jar:/system/framework/mediatek-framework.jar:/system/framework/CustomProperties.jar:/system/framework/mediatek-telephony-common.jar:/system/framework/mediatek-tablet.jar
-#    export CLASSPATH /system/framework/mediatek-op.jar
-    export BOOTCLASSPATH_EX /system/framework/mediatek-op.jar
-
-on early_property:ro.build.type=userdebug
-    write /proc/bootprof "INIT: userdebug build setting"
-    export BOOTCLASSPATH /system/framework/core.jar:/system/framework/conscrypt.jar:/system/framework/okhttp.jar:/system/framework/core-junit.jar:/system/framework/bouncycastle.jar:/system/framework/ext.jar:/system/framework/framework.jar:/system/framework/framework2.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/mms-common.jar:/system/framework/android.policy.jar:/system/framework/services.jar:/system/framework/apache-xml.jar:/system/framework/webviewchromium.jar:/system/framework/mediatek-common.jar:/system/framework/mediatek-framework.jar:/system/framework/CustomProperties.jar:/system/framework/mediatek-telephony-common.jar:/system/framework/mediatek-tablet.jar
-#    export CLASSPATH /system/framework/mediatek-op.jar
-    export BOOTCLASSPATH_EX /system/framework/mediatek-op.jar
-
-on early_property:ro.build.type=eng
-    write /proc/bootprof "INIT: eng build setting"
-    export BOOTCLASSPATH /system/framework/core.jar:/system/framework/conscrypt.jar:/system/framework/okhttp.jar:/system/framework/core-junit.jar:/system/framework/bouncycastle.jar:/system/framework/ext.jar:/system/framework/framework.jar:/system/framework/framework2.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/mms-common.jar:/system/framework/android.policy.jar:/system/framework/services.jar:/system/framework/apache-xml.jar:/system/framework/webviewchromium.jar:/system/framework/mediatek-common.jar:/system/framework/mediatek-framework.jar:/system/framework/CustomProperties.jar:/system/framework/mediatek-telephony-common.jar:/system/framework/mediatek-tablet.jar:/system/framework/emma.jar
-#    export CLASSPATH /system/framework/mediatek-op.jar
-    export BOOTCLASSPATH_EX /system/framework/mediatek-op.jar
 
 on early_property:ro.hardware=*
     setprop ro.mtk.hardware mt6592
@@ -1090,8 +1072,8 @@ service sbchk /system/bin/sh /sbchk/sec_cht.sh
     oneshot
 
 # Update the second boot logo
-service bootlogoupdater /system/bin/boot_logo_updater
-    oneshot
+#service bootlogoupdater /system/bin/boot_logo_updater
+#    oneshot
 
 service ueventd /sbin/ueventd
     class core
@@ -1150,8 +1132,8 @@ service drvbd /system/bin/drvbd
 service debuggerd /system/bin/debuggerd
     class main
 
-service mobile_log_d /system/bin/mobile_log_d
-	class main
+#service mobile_log_d /system/bin/mobile_log_d
+#	class main
     
 service bugreport /system/bin/dumpstate -d -p -B \
         -o /data/data/com.android.shell/files/bugreports/bugreport
@@ -1410,29 +1392,29 @@ service dhcp_inform /system/bin/logwrapper /system/bin/dhcpcd -s -BK -A
     disabled
     oneshot
 
-service dhcpv6_inform /system/bin/dhcp6c -c "/etc/wide-dhcpv6/dhcp6cSIP.conf" -Dfi
-    class main
-    group system radio dhcp
-    disabled
-    oneshot
+#service dhcpv6_inform /system/bin/dhcp6c -c "/etc/wide-dhcpv6/dhcp6cSIP.conf" -Dfi
+#    class main
+#    group system radio dhcp
+#    disabled
+#    oneshot
 
-service dhcp6cDNS_wlan0 /system/bin/dhcp6c -c "/etc/wide-dhcpv6/dhcp6cDNS.conf" -Df wlan0
-	disabled
-	oneshot
+#service dhcp6cDNS_wlan0 /system/bin/dhcp6c -c "/etc/wide-dhcpv6/dhcp6cDNS.conf" -Df wlan0
+#	disabled
+#	oneshot
 
-service dhcp6c_wlan0 /system/bin/dhcp6c -c "/etc/wide-dhcpv6/dhcp6c.conf" -Df wlan0
-    disabled
-    oneshot
+#service dhcp6c_wlan0 /system/bin/dhcp6c -c "/etc/wide-dhcpv6/dhcp6c.conf" -Df wlan0
+#    disabled
+#    oneshot
 
-on property:service.dhcp6c_wlan0.enable=0    
-    stop dhcp6c_wlan0    
+#on property:service.dhcp6c_wlan0.enable=0    
+#    stop dhcp6c_wlan0    
 
-on property:service.dhcp6c_wlan0.enable=1
-    start dhcp6c_wlan0
+#on property:service.dhcp6c_wlan0.enable=1
+#    start dhcp6c_wlan0
 
-service dhcp6c_PD /system/bin/dhcp6c -c "/etc/wide-dhcpv6/dhcp6cPD.conf" -Df
-	disabled
-	oneshot
+#service dhcp6c_PD /system/bin/dhcp6c -c "/etc/wide-dhcpv6/dhcp6cPD.conf" -Df
+#	disabled
+#	oneshot
 
 service pppoe_wlan0 /system/bin/launchpppoe
     user root
@@ -1839,40 +1821,40 @@ service poad /system/bin/poad
     oneshot
 
 #monitor battery status
-service batterywarning /system/bin/batterywarning
-    class main
-    user shell
-    group shell
+#service batterywarning /system/bin/batterywarning
+#    class main
+#    user shell
+#    group shell
 
-service backuprestore /system/bin/br_app_data_service
-	class main
-	socket backuprestore stream 0660 root sdcard_rw
-	user root
+#service backuprestore /system/bin/br_app_data_service
+#	class main
+#	socket backuprestore stream 0660 root sdcard_rw
+#	user root
 	
 #service BGW /system/xbin/BGW
 #	user system
 #	group gps system ccci
 #	class main
-service MtkCodecService /system/bin/MtkCodecService
-    class main
-    user root
-    group audio media sdcard_r
-#lenovo-sw chuyq 2014.3.17 added for customsn
-service custom_sn /system/bin/custom_sn
-    class main
-    oneshot
-#lenovo-sw chuyq 2014.3.17 added forcustomsn end
+#service MtkCodecService /system/bin/MtkCodecService
+#    class main
+#    user root
+#    group audio media sdcard_r
+##lenovo-sw chuyq 2014.3.17 added for customsn
+#service custom_sn /system/bin/custom_sn
+#    class main
+#    oneshot
+##lenovo-sw chuyq 2014.3.17 added forcustomsn end
 
 
-# begin, lenovo.sw zengzm 2014.03.13 added; nac_server, nac_ue service loader
-service nac_server /system/bin/nac_server
-    class main
-    user root
-
-service nac_ue /system/bin/nac_ue
-    class main
-    user root
-# end, lenovo.sw zengzm 2014.03.13 added; nac_server, nac_ue service loader
+## begin, lenovo.sw zengzm 2014.03.13 added; nac_server, nac_ue service loader
+#service nac_server /system/bin/nac_server
+#    class main
+#    user root
+#
+#service nac_ue /system/bin/nac_ue
+#    class main
+#    user root
+## end, lenovo.sw zengzm 2014.03.13 added; nac_server, nac_ue service loader
 
 
 

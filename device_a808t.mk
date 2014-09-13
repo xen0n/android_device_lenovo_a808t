@@ -22,4 +22,24 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/root/fstab:root/fstab
 
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/root/factory_init.project.rc:root/factory_init.project.rc \
+    $(LOCAL_PATH)/root/factory_init.rc:root/factory_init.rc \
+    $(LOCAL_PATH)/root/init.aee.customer.rc:root/init.aee.customer.rc \
+    $(LOCAL_PATH)/root/init.charging.rc:root/init.charging.rc \
+    $(LOCAL_PATH)/root/init.environ.rc:root/init.environ.rc \
+    $(LOCAL_PATH)/root/init.fuse.rc:root/init.fuse.rc \
+    $(LOCAL_PATH)/root/init.modem.rc:root/init.modem.rc \
+    $(LOCAL_PATH)/root/init.project.rc:root/init.project.rc \
+    $(LOCAL_PATH)/root/init.protect.rc:root/init.protect.rc \
+    $(LOCAL_PATH)/root/init.rc:root/init.rc \
+    $(LOCAL_PATH)/root/init.trace.rc:root/init.trace.rc \
+    $(LOCAL_PATH)/root/init.usb.rc:root/init.usb.rc \
+    $(LOCAL_PATH)/root/init.xlog.rc:root/init.xlog.rc \
+    $(LOCAL_PATH)/root/meta_init.modem.rc:root/meta_init.modem.rc \
+    $(LOCAL_PATH)/root/meta_init.project.rc:root/meta_init.project.rc \
+    $(LOCAL_PATH)/root/meta_init.rc:root/meta_init.rc \
+    $(LOCAL_PATH)/root/ueventd.rc:root/ueventd.rc
+
+
 # vim:set ai et ts=4 sw=4 sts=4 fenc=utf-8:

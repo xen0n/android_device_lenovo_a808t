@@ -32,14 +32,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/root/init.modem.rc:root/init.modem.rc \
     $(LOCAL_PATH)/root/init.project.rc:root/init.project.rc \
     $(LOCAL_PATH)/root/init.protect.rc:root/init.protect.rc \
-    $(LOCAL_PATH)/root/init.rc:root/init.rc \
+    $(LOCAL_PATH)/root/init.a808t.rc:root/init.a808t.rc \
     $(LOCAL_PATH)/root/init.trace.rc:root/init.trace.rc \
-    $(LOCAL_PATH)/root/init.usb.rc:root/init.usb.rc \
+    $(LOCAL_PATH)/root/init.a808t.usb.rc:root/init.a808t.usb.rc \
     $(LOCAL_PATH)/root/init.xlog.rc:root/init.xlog.rc \
     $(LOCAL_PATH)/root/meta_init.modem.rc:root/meta_init.modem.rc \
     $(LOCAL_PATH)/root/meta_init.project.rc:root/meta_init.project.rc \
     $(LOCAL_PATH)/root/meta_init.rc:root/meta_init.rc \
-    $(LOCAL_PATH)/root/ueventd.rc:root/ueventd.rc
+    $(LOCAL_PATH)/root/ueventd.a808t.rc:root/ueventd.a808t.rc
 
 
 PRODUCT_PROPERTY_OVERRIDES := \

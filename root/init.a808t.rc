@@ -6,7 +6,7 @@
 
 #import /init.environ.rc
 #import /init.${ro.hardware}.rc
-import /init.usb.rc
+import /init.a808t.usb.rc
 import /init.trace.rc
 
 #import /FWUpgradeInit.rc

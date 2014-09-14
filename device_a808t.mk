@@ -42,4 +42,46 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/root/ueventd.rc:root/ueventd.rc
 
 
+PRODUCT_PROPERTY_OVERRIDES := \
+    ro.mediatek.version.release=ALPS.KK1.MP3.V3 \
+    ro.mediatek.platform=MT6592 \
+    ro.mediatek.chip_ver=S01 \
+    ro.mediatek.version.branch=KK1.MP3 \
+    ro.mediatek.version.sdk=2 \
+    rild.libpath=/system/lib/mtk-ril.so \
+    rild.libargs=-d /dev/ttyC0 \
+    ril.specific.sm_cause=0 \
+    ril.external.md=0 \
+    ril.current.share_modem=1 \
+    ril.first.md=1 \
+    ril.flightmode.poweroffMD=0 \
+    ril.telephony.mode=0 \
+    ril.radiooff.poweroffMD=0 \
+    ril.active.md=0 \
+    mediatek.wlan.chip=MTK_CONNSYS_MT6592 \
+    mediatek.wlan.module.postfix=_mtk_connsys_mt6592 \
+    mediatek.extmd.usbport=0 \
+    wifi.interface=wlan0 \
+    ro.mediatek.wlan.wsc=1 \
+    ro.mediatek.wlan.p2p=1 \
+    mediatek.wlan.ctia=0 \
+    wifi.tethering.interface=ap0 \
+    wifi.direct.interface=p2p0 \
+    ro.opengles.version=131072 \
+    ro.sf.lcd_density=320 \
+    persist.gemini.sim_num=1 \
+    ro.gemini.smart_sim_switch=false \
+    ro.gemini.smart_3g_switch=0 \
+    ro.mediatek.gemini_support=false \
+    persist.mtk.wcn.combo.chipid=-1 \
+    fmradio.driver.enable=1 \
+    persist.radio.fd.counter=15 \
+    persist.radio.fd.off.counter=5 \
+    persist.radio.fd.r8.counter=15 \
+    persist.radio.fd.off.r8.counter=5
+
+#   ro.camera.sound.forced=0
+#   ro.audio.silent=0
+
+
 # vim:set ai et ts=4 sw=4 sts=4 fenc=utf-8:

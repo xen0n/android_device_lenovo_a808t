@@ -27,7 +27,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/root/factory_init.rc:root/factory_init.rc \
     $(LOCAL_PATH)/root/init.aee.customer.rc:root/init.aee.customer.rc \
     $(LOCAL_PATH)/root/init.charging.rc:root/init.charging.rc \
-    $(LOCAL_PATH)/root/init.environ.rc:root/init.environ.rc \
     $(LOCAL_PATH)/root/init.fuse.rc:root/init.fuse.rc \
     $(LOCAL_PATH)/root/init.modem.rc:root/init.modem.rc \
     $(LOCAL_PATH)/root/init.project.rc:root/init.project.rc \

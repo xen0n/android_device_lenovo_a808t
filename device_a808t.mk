@@ -19,7 +19,7 @@ $(call inherit-product-if-exists, vendor/lenovo/a808t/device-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay/
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/root/fstab:root/fstab
+    $(LOCAL_PATH)/root/fstab.mt6592:root/fstab.mt6592
 
 
 PRODUCT_COPY_FILES += \

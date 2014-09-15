@@ -34,9 +34,9 @@ on post-fs-data
     insmod /system/lib/modules/mtk_wmt_detect.ko
 
 # Create char device file for WMT, GPS, BT, FM, WIFI
-    mknod /dev/stpwmt c 190 0;
-    mknod /dev/stpgps c 191 0;
-    mknod /dev/stpbt  c 192 0;
+    exec mknod /dev/stpwmt c 190 0;
+    exec mknod /dev/stpgps c 191 0;
+    exec mknod /dev/stpbt  c 192 0;
 
     chmod 0660 /dev/stpwmt
     chown system system /dev/stpwmt
@@ -44,7 +44,7 @@ on post-fs-data
     chmod 0660 /dev/wmtdetect
     chown system system /dev/wmtdetect
 
-    mknod /dev/wmtWifi c 153 0
+    exec mknod /dev/wmtWifi c 153 0
     chmod 0660 /dev/wmtWifi
     chown system system /dev/wmtWifi
 
@@ -75,7 +75,7 @@ on post-fs-data
 #   insmod /system/lib/modules/wlan.ko
 
 # Char device for BT 3.0 HS
-    mknod /dev/ampc0 c 151 0
+    exec mknod /dev/ampc0 c 151 0
     chown bluetooth bluetooth /dev/ampc0
     chmod 0660 /dev/ampc0
 

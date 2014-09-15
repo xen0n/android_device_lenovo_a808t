@@ -41,6 +41,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/root/ueventd.mt6592.rc:root/ueventd.mt6592.rc
 
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
+    ro.boot.hardware=mt6592
+
+
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.mediatek.version.release=ALPS.KK1.MP3.V3 \
     ro.mediatek.platform=MT6592 \

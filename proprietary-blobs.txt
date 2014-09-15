@@ -108,7 +108,9 @@ etc/mddb/BPLGUInfoCustomAppSrcP_MT6290_S01_A808T_V38_5_ltg_n
 # A heck lot of libraries need a thing called __xlog_buf_printf,
 # its source nowhere to be found, will remove this as soon as I find a way
 # to work around this...
-lib/liblog.so
+# - Oh well it lacks android_log_setColoredOutput, even logcat wouldn't link
+# with this. Aww.
+#lib/liblog.so
 
 
 # Audio

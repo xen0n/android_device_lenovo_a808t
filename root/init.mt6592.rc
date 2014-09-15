@@ -56,7 +56,7 @@ on fs
 	chmod 0771 /protect_f
 	chmod 0771 /protect_s
 
-	mount_all /fstab.${ro.hardware}
+	mount_all /fstab.mt6592
 
 
 # mount partition by some option

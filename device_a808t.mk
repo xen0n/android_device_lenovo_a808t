@@ -23,9 +23,6 @@ PRODUCT_COPY_FILES += \
 
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/root/factory_init.project.rc:root/factory_init.project.rc \
-    $(LOCAL_PATH)/root/factory_init.rc:root/factory_init.rc \
-    $(LOCAL_PATH)/root/init.aee.customer.rc:root/init.aee.customer.rc \
     $(LOCAL_PATH)/root/init.charging.rc:root/init.charging.rc \
     $(LOCAL_PATH)/root/init.fuse.rc:root/init.fuse.rc \
     $(LOCAL_PATH)/root/init.modem.rc:root/init.modem.rc \
@@ -35,9 +32,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/root/init.trace.rc:root/init.trace.rc \
     $(LOCAL_PATH)/root/init.mt6592.usb.rc:root/init.mt6592.usb.rc \
     $(LOCAL_PATH)/root/init.xlog.rc:root/init.xlog.rc \
-    $(LOCAL_PATH)/root/meta_init.modem.rc:root/meta_init.modem.rc \
-    $(LOCAL_PATH)/root/meta_init.project.rc:root/meta_init.project.rc \
-    $(LOCAL_PATH)/root/meta_init.rc:root/meta_init.rc \
     $(LOCAL_PATH)/root/ueventd.mt6592.rc:root/ueventd.mt6592.rc
 
 

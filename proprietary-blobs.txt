@@ -118,6 +118,8 @@ lib/libbessound_hd_mtk.so
 lib/libbessound_mtk.so
 
 # Graphics
+lib/libdpframework.so
+lib/libm4u.so
 lib/libMali.so
 lib/egl/libEGL_mali.so
 lib/egl/libGLES_android.so
@@ -148,7 +150,6 @@ lib/libmtkshifter.so
 lib/libaed.so
 lib/libbwc.so
 lib/libion.so
-lib/libdpframework.so
 lib/libmatv_cust.so
 lib/libfeatureio.so
 lib/libimageio.so

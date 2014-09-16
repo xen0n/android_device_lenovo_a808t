@@ -14,9 +14,6 @@ bin/autokd
 bin/bmm050d
 bin/bmm056d
 
-bin/ccci_fsd
-bin/ccci_mdinit
-
 bin/lsm303md
 bin/mc6420d
 bin/memsicd
@@ -51,6 +48,8 @@ bin/aee
 bin/aee_aed
 bin/aee_core_forwarder
 bin/aee_dumpstate
+bin/ccci_fsd
+bin/ccci_mdinit
 bin/eemcs_fsd
 bin/eemcs_mdinit
 bin/pppd

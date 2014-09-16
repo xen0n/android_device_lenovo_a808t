@@ -81,4 +81,11 @@ PRODUCT_PROPERTY_OVERRIDES := \
 #   ro.audio.silent=0
 
 
+PRODUCT_TAGS += dalvik.gc.type-precise
+
+
+# configure Dalvik heap settings for large memory
+$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
+
+
 # vim:set ai et ts=4 sw=4 sts=4 fenc=utf-8:

@@ -80,3 +80,7 @@ BOARD_EGL_CFG := $(DEVICE_FOLDER)/egl.cfg
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_mtk
+
+
+# telephony
+BOARD_RIL_CLASS := ../../../device/lenovo/a808t/ril/

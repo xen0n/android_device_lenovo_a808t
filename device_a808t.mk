@@ -95,6 +95,11 @@ PRODUCT_PACKAGES += \
     lib_driver_cmd_mtk
 
 
+# telephony
+PRODUCT_PACKAGES += \
+    gsm0710muxd
+
+
 # media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media_codecs.xml:system/etc/media_codecs.xml

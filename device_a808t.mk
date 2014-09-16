@@ -59,7 +59,6 @@ PRODUCT_PROPERTY_OVERRIDES := \
     persist.radio.fd.off.r8.counter=5
 
 #   ro.camera.sound.forced=0
-#   ro.audio.silent=0
 
 
 PRODUCT_TAGS += dalvik.gc.type-precise

@@ -95,4 +95,9 @@ PRODUCT_PACKAGES += \
     lib_driver_cmd_mtk
 
 
+# media
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/media_codecs.xml:system/etc/media_codecs.xml
+
+
 # vim:set ai et ts=4 sw=4 sts=4 fenc=utf-8:

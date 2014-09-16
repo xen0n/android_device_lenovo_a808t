@@ -33,8 +33,6 @@ bin/mtk_agpsd
 
 bin/mtkbt
 
-bin/muxreport
-
 bin/nvram_agent_binder
 bin/nvram_daemon
 bin/nvram_proximity
@@ -47,10 +45,17 @@ lib/libnvram_platform.so
 lib/libnvram_sec.so
 lib/libnvramagentclient.so
 
+
+# RIL
+bin/aee
+bin/aee_aed
+bin/aee_core_forwarder
+bin/aee_dumpstate
 bin/pppd
 bin/pppd_dt
 bin/rild
 bin/rildmd2
+bin/muxreport
 lib/libril.so
 lib/librilmtk.so
 lib/librilmtkmd2.so
@@ -58,6 +63,7 @@ lib/librilutils.so
 lib/libutilrilmtk.so
 lib/mtk-ril.so
 lib/mtk-rilmd2.so
+
 
 bin/thermal
 bin/thermal_manager

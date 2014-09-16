@@ -2,28 +2,28 @@ bin/6620_launcher
 bin/6620_wmt_concurrency
 bin/6620_wmt_lpbk
 
-#bin/MtkCodecService
+bin/MtkCodecService
 
-#bin/akmd09911
-#bin/akmd8963
-#bin/akmd8975
-#bin/ami304d
-#bin/atcid
-#bin/audiocmdservice_atci
-#bin/autokd
-#bin/bmm050d
-#bin/bmm056d
+bin/akmd09911
+bin/akmd8963
+bin/akmd8975
+bin/ami304d
+bin/atcid
+bin/audiocmdservice_atci
+bin/autokd
+bin/bmm050d
+bin/bmm056d
 
 bin/ccci_fsd
 bin/ccci_mdinit
 
-#bin/lsm303md
-#bin/mc6420d
-#bin/memsicd
-#bin/memsicd3416x
-#bin/mfv_ut
-#bin/qmc5983d
-#bin/s62xd
+bin/lsm303md
+bin/mc6420d
+bin/memsicd
+bin/memsicd3416x
+bin/mfv_ut
+bin/qmc5983d
+bin/s62xd
 
 bin/msensord
 bin/orientationd

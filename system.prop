@@ -1,0 +1,3 @@
+# spaces in Makefiles are not that friendly, they translate into
+# newlines if unescaped...
+rild.libargs=-d /dev/ttyC0

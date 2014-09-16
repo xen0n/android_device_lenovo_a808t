@@ -46,7 +46,6 @@ PRODUCT_PROPERTY_OVERRIDES := \
     ro.mediatek.version.branch=KK1.MP3 \
     ro.mediatek.version.sdk=2 \
     rild.libpath=/system/lib/mtk-ril.so \
-    rild.libargs=-d /dev/ttyC0 \
     ril.specific.sm_cause=0 \
     ril.external.md=0 \
     ril.current.share_modem=1 \

@@ -18,6 +18,7 @@ sysclktz 0
 loglevel 6
     write /proc/bootprof "INIT: on init start"
 
+    export EXTERNAL_STORAGE /storage/sdcard0
     export USBOTG_STORAGE /storage/usbotg
 
     #create mountpoint for persist partition

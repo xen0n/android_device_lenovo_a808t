@@ -14,3 +14,15 @@ rild.libpath=/system/lib/mtk-ril.so
 rild.libargs=-d /dev/ttyC0
 
 ro.telephony.ril_class=MediaTekRIL
+
+
+# wifi
+mediatek.wlan.chip=MTK_CONNSYS_MT6592
+mediatek.wlan.module.postfix=_mtk_connsys_mt6592
+mediatek.extmd.usbport=0
+wifi.interface=wlan0
+ro.mediatek.wlan.wsc=1
+ro.mediatek.wlan.p2p=1
+mediatek.wlan.ctia=0
+wifi.tethering.interface=ap0
+wifi.direct.interface=p2p0

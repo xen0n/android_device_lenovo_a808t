@@ -51,11 +51,14 @@ bin/aee
 bin/aee_aed
 bin/aee_core_forwarder
 bin/aee_dumpstate
+bin/eemcs_fsd
+bin/eemcs_mdinit
 bin/pppd
 bin/pppd_dt
 bin/rild
 bin/rildmd2
 bin/muxreport
+bin/terservice
 lib/libril.so
 lib/librilmtk.so
 lib/librilmtkmd2.so

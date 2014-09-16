@@ -91,5 +91,8 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
 
+PRODUCT_PACKAGES += \
+    lib_driver_cmd_mtk
+
 
 # vim:set ai et ts=4 sw=4 sts=4 fenc=utf-8:

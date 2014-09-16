@@ -125,6 +125,8 @@ lib/libaudiofp.so
 lib/libaudiosetting.so
 lib/libbessound_hd_mtk.so
 lib/libbessound_mtk.so
+lib/libblisrc.so
+lib/libblisrc32.so
 
 # Graphics
 lib/libdpframework.so
@@ -272,8 +274,6 @@ lib/libmpojni.so
 #lib/libart.so
 #lib/libatvctrlservice.so
 #lib/libawb_wrap.so
-#lib/libblisrc.so
-#lib/libblisrc32.so
 #lib/libbrctrler.so
 #lib/libbspatch.so
 #lib/ssl/engines/libkeystore.so

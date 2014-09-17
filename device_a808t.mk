@@ -29,7 +29,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/root/init.project.rc:root/init.project.rc \
     $(LOCAL_PATH)/root/init.protect.rc:root/init.protect.rc \
     $(LOCAL_PATH)/root/init.mt6592.rc:root/init.mt6592.rc \
-    $(LOCAL_PATH)/root/init.trace.rc:root/init.trace.rc \
     $(LOCAL_PATH)/root/init.mt6592.usb.rc:root/init.mt6592.usb.rc \
     $(LOCAL_PATH)/root/init.xlog.rc:root/init.xlog.rc \
     $(LOCAL_PATH)/root/ueventd.mt6592.rc:root/ueventd.mt6592.rc

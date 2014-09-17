@@ -40,6 +40,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
 
 
 PRODUCT_PROPERTY_OVERRIDES := \
+    ro.build.selinux=0 \
     ro.mediatek.version.release=ALPS.KK1.MP3.V3 \
     ro.mediatek.platform=MT6592 \
     ro.mediatek.chip_ver=S01 \

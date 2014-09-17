@@ -9,6 +9,10 @@ import /init.fuse.rc
 
 
 on early-init
+	# MTK binaries don't play well with SELinux without some major merge,
+	# so let's reduce security a little for at least a working phone...
+	setenforce 0
+
     # BATTERY proc
     chown shell system /proc/mtk_battery_cmd/current_cmd
     chown shell system /proc/mtk_battery_cmd/discharging_cmd

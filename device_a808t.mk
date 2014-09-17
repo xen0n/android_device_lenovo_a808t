@@ -35,7 +35,8 @@ PRODUCT_COPY_FILES += \
 
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
-    ro.boot.hardware=mt6592
+    ro.boot.hardware=mt6592 \
+    persist.mtk.aee.aed=on
 
 
 PRODUCT_PROPERTY_OVERRIDES := \

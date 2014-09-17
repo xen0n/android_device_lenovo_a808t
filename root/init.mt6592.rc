@@ -1,6 +1,9 @@
 import /init.${ro.hardware}.usb.rc
 import /init.protect.rc
-import init.xlog.rc
+
+# so what the **** does "xlog" do?!
+#import init.xlog.rc
+
 
 on early-init
     # BATTERY proc

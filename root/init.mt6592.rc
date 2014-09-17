@@ -67,13 +67,13 @@ on fs_property:ro.persist.partition.support=yes
 
 on post-fs
     # change sbchk permission before mounted as read-only
-    mount rootfs rootfs / rw remount
-    chown nvram system /sbchk
-    chown nvram system /sbchk/sbchk
-    chown nvram system /sbchk/sec_chk.sh
-    chmod 750 /sbchk
-    chmod 750 /sbchk/sbchk
-    chmod 750 /sbchk/sec_chk.sh
+    #mount rootfs rootfs / rw remount
+    #chown nvram system /sbchk
+    #chown nvram system /sbchk/sbchk
+    #chown nvram system /sbchk/sec_chk.sh
+    #chmod 750 /sbchk
+    #chmod 750 /sbchk/sbchk
+    #chmod 750 /sbchk/sec_chk.sh
 
 	#change permissions for mediaserver
 	chown root media /proc/clkmgr/mipi_test
@@ -666,12 +666,12 @@ on property:persist.uartconsole.enable=1
 
 ## Daemon processes to be run by init.
 ##
-chown root root /sbchk/sec_cht.sh
-chmod 0777 /sbchk/sec_cht.sh
-service sbchk /system/bin/sh /sbchk/sec_cht.sh
-    user root
-    group root
-    oneshot
+#chown root root /sbchk/sec_cht.sh
+#chmod 0777 /sbchk/sec_cht.sh
+#service sbchk /system/bin/sh /sbchk/sec_cht.sh
+#    user root
+#    group root
+#    oneshot
 
 
 # Update the second boot logo
@@ -1077,10 +1077,10 @@ service emd_daemon /system/bin/emd_daemon
 #
 
 
-service sbchk /sbchk/sec_chk.sh
-    user nvram
-    group system
-    oneshot
+#service sbchk /sbchk/sec_chk.sh
+#    user nvram
+#    group system
+#    oneshot
 
 # XXX: overridden, I don't know why is this deviation needed
 #service keystore /system/bin/keystore /data/misc/keystore

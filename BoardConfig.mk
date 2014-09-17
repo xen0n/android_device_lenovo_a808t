@@ -93,3 +93,8 @@ WIFI_DRIVER_FW_PATH_P2P := "STA+P2P"
 
 # telephony
 BOARD_RIL_CLASS := ../../../device/lenovo/a808t/ril/
+
+
+# SELinux
+BOARD_SEPOLICY_DIRS += $(DEVICE_FOLDER)/sepolicy
+# BOARD_SEPOLICY_UNION += TODO

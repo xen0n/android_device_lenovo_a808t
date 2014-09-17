@@ -30,6 +30,15 @@ bin/mtk_agpsd
 
 bin/mtkbt
 
+
+# MTK log things
+# I really don't want this but rild keeps crashing and I have no way but to
+# experiment with the most weird combinations of blobs...
+bin/mobile_log_d
+bin/xlog
+lib/libmediatek_exceptionlog.so
+
+
 bin/nvram_agent_binder
 bin/nvram_daemon
 bin/nvram_proximity
@@ -333,7 +342,6 @@ lib/libmpojni.so
 #lib/liblocSDK_2.3.so
 #lib/liblocation-1.0.0-legacy.so
 #lib/libmcld.so
-#lib/libmediatek_exceptionlog.so
 #lib/libmemorydumper.so
 #lib/libmmprofile.so
 #lib/libmmprofile_jni.so

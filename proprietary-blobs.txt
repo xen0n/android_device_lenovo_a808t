@@ -43,6 +43,11 @@ lib/libnvram_sec.so
 lib/libnvramagentclient.so
 
 
+# wifi
+bin/wlan_loader
+lib/libwifitest.so
+
+
 # RIL
 bin/aee
 bin/aee_aed
@@ -64,6 +69,7 @@ bin/muxreport
 bin/terservice
 lib/libaed.so
 lib/libmdloggerrecycle.so
+lib/libterservice.so
 lib/libril.so
 lib/librilmtk.so
 lib/librilmtkmd2.so
@@ -78,7 +84,6 @@ bin/thermal_manager
 bin/thermald
 
 #bin/hald  -- this is nonexistent on A808t
-bin/wlan_loader
 bin/wmt_loader
 
 xbin/libmnlp_mt6592
@@ -87,6 +92,8 @@ lib/libmnl.so
 
 #etc/agps_profiles_conf.xml
 
+
+# firmware
 etc/firmware/S_ANDRO_SFL.ini
 etc/firmware/WIFI_RAM_CODE
 etc/firmware/WIFI_RAM_CODE_E6
@@ -109,6 +116,7 @@ etc/firmware/mt6627/mt6627_fm_v4_patch.bin
 etc/firmware/mt6627/mt6627_fm_v5_coeff.bin
 etc/firmware/mt6627/mt6627_fm_v5_patch.bin
 etc/mddb/BPLGUInfoCustomAppSrcP_MT6290_S01_A808T_V38_5_ltg_n
+
 
 # FM Radio
 #etc/fmr/mt6627_fm_cust.cfg
@@ -142,8 +150,10 @@ lib/libbessound_mtk.so
 lib/libblisrc.so
 lib/libblisrc32.so
 
+
 # Graphics
 lib/libdpframework.so
+lib/libion.so
 lib/libm4u.so
 lib/libMali.so
 lib/egl/libEGL_mali.so
@@ -151,11 +161,13 @@ lib/egl/libGLES_android.so
 lib/egl/libGLESv1_CM_mali.so
 lib/egl/libGLESv2_mali.so
 
+
 # HW
 lib/hw/gralloc.mt6592.so
 lib/hw/hwcomposer.mt6592.so
 lib/hw/libaudio.r_submix.default.so
 lib/hw/libaudio.usb.default.so
+
 
 # Platform
 lib/libmtk_cipher.so
@@ -171,9 +183,9 @@ lib/libmtklimiter.so
 lib/libmtkplayer.so
 lib/libmtkshifter.so
 
+
 # ??
 lib/libbwc.so
-lib/libion.so
 lib/libmatv_cust.so
 lib/libfeatureio.so
 lib/libimageio.so
@@ -217,6 +229,7 @@ lib/libmpojni.so
 #lib/libvcodec_utility.so
 #lib/libvcodecdrv.so
 
+
 # Bluetooth
 #lib/libbluetooth_mtk.so
 #lib/libbluetooth_relayer.so
@@ -226,6 +239,7 @@ lib/libmpojni.so
 #lib/libbt-utils.so
 #vendor/lib/hw/audio.a2dp.blueangel.so
 #vendor/lib/hw/bluetooth.blueangel.so
+
 
 # Camera
 #lib/libcam.camadapter.so
@@ -248,6 +262,7 @@ lib/libmpojni.so
 #lib/libcameracustom.so
 #lib/libcameraservice.so
 
+
 # FM Radio
 #lib/libfm_gpio_jni.so
 #lib/libfmcust.so
@@ -257,9 +272,11 @@ lib/libmpojni.so
 #lib/libfmmt6628.so
 #lib/libfmmt6630.so
 
+
 # Accelerometer (?)
 #lib/libphonemotiondetector.so
 #lib/libphonemotiondetector_jni.so
+
 
 # Digital Restriction Management
 #lib/drm/libdrmmtkplugin.so
@@ -360,7 +377,6 @@ lib/libmpojni.so
 #lib/libvtmal.so
 #lib/libwapi.so
 #lib/libwebrtc_audio_preprocessing.so
-#lib/libwifitest.so
 #lib/libyzs_usc.so
 #lib/soundfx/libaudiopreprocessing.so
 #lib/soundfx/libbundlewrapper.so

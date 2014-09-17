@@ -119,10 +119,3 @@ service conn_launcher /system/bin/logwrapper /system/bin/6620_launcher -p /syste
 #
 # Connectivity related services (End)
 #
-
-
-#lenovo sw linrq1 20140326 add  writeconfig begin
-service writeconfig /system/bin/writeconfig
-   class main
-   user root
-#lenovo sw linrq1 20140326 add  writeconfig end

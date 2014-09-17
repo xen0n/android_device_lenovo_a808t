@@ -1,4 +1,6 @@
 import /init.${ro.hardware}.usb.rc
+import /init.project.rc
+import /init.modem.rc
 import /init.protect.rc
 import /init.fuse.rc
 

@@ -50,14 +50,20 @@ bin/aee_core_forwarder
 bin/aee_dumpstate
 bin/ccci_fsd
 bin/ccci_mdinit
+bin/dualmdlogger
 bin/eemcs_fsd
 bin/eemcs_mdinit
+bin/emcsmdlogger
 bin/pppd
 bin/pppd_dt
 bin/rild
 bin/rildmd2
+bin/mdlogger
+bin/md_minilog_util
 bin/muxreport
 bin/terservice
+lib/libaed.so
+lib/libmdloggerrecycle.so
 lib/libril.so
 lib/librilmtk.so
 lib/librilmtkmd2.so
@@ -166,7 +172,6 @@ lib/libmtkplayer.so
 lib/libmtkshifter.so
 
 # ??
-lib/libaed.so
 lib/libbwc.so
 lib/libion.so
 lib/libmatv_cust.so
@@ -311,7 +316,6 @@ lib/libmpojni.so
 #lib/liblocSDK_2.3.so
 #lib/liblocation-1.0.0-legacy.so
 #lib/libmcld.so
-#lib/libmdloggerrecycle.so
 #lib/libmediatek_exceptionlog.so
 #lib/libmemorydumper.so
 #lib/libmmprofile.so

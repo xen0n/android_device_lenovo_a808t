@@ -70,6 +70,12 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_FOLDER)/root/fstab.mt6592
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 
+# base system
+# enable MTK-specific UIDs globally as suggested in commit 8bfc510 of repo
+# android_system_core
+COMMON_GLOBAL_CFLAGS += -DMTK_UIDS
+
+
 # graphics
 BOARD_EGL_CFG := $(DEVICE_FOLDER)/egl.cfg
 

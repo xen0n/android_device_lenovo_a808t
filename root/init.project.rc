@@ -121,20 +121,6 @@ service conn_launcher /system/bin/logwrapper /system/bin/6620_launcher -p /syste
 #
 
 
-# Begin,Lenovo-sw zhuan1 20140317, broadcast to apps when the value changed
-on property:persist.backgrounddata.enable=false
-    start backgrounddata
-
-on property:persist.backgrounddata.enable=true
-    start backgrounddata
-
-service backgrounddata /system/bin/sh -c "am broadcast -a com.lenovo.action.BACKGROUND_DATA"
-    class main
-    user system
-    disabled
-    oneshot
-# End,Lenovo-sw zhuan1 20140317, broadcast to apps when the value changed
-
 #lenovo sw linrq1 20140326 add  writeconfig begin
 service writeconfig /system/bin/writeconfig
    class main

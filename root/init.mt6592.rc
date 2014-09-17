@@ -1,5 +1,6 @@
 import /init.${ro.hardware}.usb.rc
 import /init.protect.rc
+import /init.fuse.rc
 
 # so what the **** does "xlog" do?!
 #import init.xlog.rc

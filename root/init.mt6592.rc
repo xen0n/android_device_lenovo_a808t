@@ -1,6 +1,5 @@
 import /init.${ro.hardware}.usb.rc
-import /init.trace.rc
-
+import /init.protect.rc
 import init.xlog.rc
 
 on early-init
@@ -49,13 +48,6 @@ on fs
     #exec /system/bin/ext4_resize
     #exec /sbin/e2fsck -p /emmc@cache
     #exec /sbin/tune2fs -O has_journal /emmc@cache
-
-	mkdir /protect_f
-	mkdir /protect_s
-	chown system system /protect_f
-	chown system system /protect_s
-	chmod 0771 /protect_f
-	chmod 0771 /protect_s
 
 	mount_all /fstab.mt6592
 

@@ -1,7 +1,7 @@
 #!/system/bin/sh
 
 # mknod is not present in stock Android, let's use busybox
-PATH=/system/xbin
+PATH=/system/xbin:/system/bin
 
 
 # Create char device file for WMT, GPS, BT, FM, WIFI
@@ -41,25 +41,33 @@ chown system:system /dev/ttyMT2
 
 #Camera
 chmod 0660 /dev/LC898122AF
-chown system camera /dev/LC898122AF
+chown system:camera /dev/LC898122AF
 # BT
 chmod 0660 /dev/stpbt
-chown bluetooth radio /dev/stpbt
+chown bluetooth:radio /dev/stpbt
 
 # GPS
-chown gps gps /dev/stpgps
-chown gps gps /sys/class/gpsdrv/gps/pwrctl
-chown gps gps /sys/class/gpsdrv/gps/suspend
-chown gps gps /sys/class/gpsdrv/gps/state
-chown gps gps /sys/class/gpsdrv/gps/pwrsave
-chown gps gps /sys/class/gpsdrv/gps/status
+chown gps:gps /dev/stpgps
+chown gps:gps /sys/class/gpsdrv/gps/pwrctl
+chown gps:gps /sys/class/gpsdrv/gps/suspend
+chown gps:gps /sys/class/gpsdrv/gps/state
+chown gps:gps /sys/class/gpsdrv/gps/pwrsave
+chown gps:gps /sys/class/gpsdrv/gps/status
 chmod 0660 /dev/stpgps
 
 # WiFi
-mkdir /data/misc/wifi 0770 wifi wifi
-mkdir /data/misc/wifi/sockets 0770 wifi wifi
-mkdir /data/misc/wpa_supplicant 0770 wifi wifi
-chown wifi wifi /data/misc/wifi
+mkdir /data/misc/wifi
+chmod 0770 /data/misc/wifi
+chown wifi:wifi /data/misc/wifi
+
+mkdir /data/misc/wifi/sockets
+chmod 0770 /data/misc/wifi/sockets
+chown wifi:wifi /data/misc/wifi/sockets
+
+mkdir /data/misc/wpa_supplicant
+chmod 0770 /data/misc/wifi/wpa_supplicant
+chown wifi:wifi /data/misc/wifi/wpa_supplicant
+
 
 #Disable for one Single loader
 # Load WiFi Driver

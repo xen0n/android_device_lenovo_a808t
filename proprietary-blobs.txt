@@ -64,6 +64,7 @@ bin/aee_core_forwarder
 bin/aee_dumpstate
 bin/ccci_fsd
 bin/ccci_mdinit
+bin/drvbd
 bin/dualmdlogger
 bin/eemcs_fsd
 bin/eemcs_mdinit

@@ -4,6 +4,12 @@
 PATH=/system/xbin
 
 
+# Create char device file for WMT, GPS, BT, FM, WIFI
+mknod /dev/stpwmt c 190 0
+mknod /dev/stpgps c 191 0
+mknod /dev/stpbt  c 192 0
+mknod /dev/wmtWifi c 153 0
+
 chmod 0660 /dev/stpwmt
 chown system:system /dev/stpwmt
 
@@ -32,13 +38,6 @@ chown system:system /dev/ttyMT2
 #insmod /system/lib/modules/mtk_wmt_wifi.ko
 
 insmod /system/lib/modules/mtk_wmt_detect.ko
-
-# Create char device file for WMT, GPS, BT, FM, WIFI
-mknod /dev/stpwmt c 190 0
-mknod /dev/stpgps c 191 0
-mknod /dev/stpbt  c 192 0
-mknod /dev/wmtWifi c 153 0
-
 
 #Camera
 chmod 0660 /dev/LC898122AF

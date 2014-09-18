@@ -34,7 +34,7 @@ on post-fs-data
     insmod /system/lib/modules/mtk_wmt_detect.ko
 
 # Create char device file for WMT, GPS, BT, FM, WIFI
-    exec /makestpnodes.sh
+    exec /system/bin/sh /makestpnodes.sh
 
     chmod 0660 /dev/stpwmt
     chown system system /dev/stpwmt

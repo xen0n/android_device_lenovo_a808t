@@ -699,7 +699,7 @@ service drvbd /system/bin/drvbd
     user system
     group system
 
-service debuggerd /system/bin/debuggerd
+service debuggerd /system/bin/aee_aed
     class main
 
 service mobile_log_d /system/bin/mobile_log_d

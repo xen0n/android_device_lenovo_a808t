@@ -5,7 +5,7 @@ import /init.protect.rc
 import /init.fuse.rc
 
 # so what the **** does "xlog" do?!
-#import init.xlog.rc
+import init.xlog.rc
 
 
 on early-init
@@ -702,8 +702,8 @@ service drvbd /system/bin/drvbd
 service debuggerd /system/bin/debuggerd
     class main
 
-#service mobile_log_d /system/bin/mobile_log_d
-#	class main
+service mobile_log_d /system/bin/mobile_log_d
+	class main
     
 service bugreport /system/bin/dumpstate -d -p -B \
         -o /data/data/com.android.shell/files/bugreports/bugreport

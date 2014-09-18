@@ -17,6 +17,10 @@
 $(call inherit-product, device/lenovo/a808t/device_a808t.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
+# Configure as xhdpi device to prevent breaking without mdpi drawables
+PRODUCT_AAPT_CONFIG := normal mdpi hdpi xhdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
+
 PRODUCT_NAME := full_a808t
 PRODUCT_DEVICE := a808t
 PRODUCT_BRAND := Lenovo

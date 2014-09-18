@@ -39,6 +39,8 @@ bin/xlog
 lib/libmediatek_exceptionlog.so
 
 
+bin/dm_agent_binder
+bin/dmlog
 bin/nvram_agent_binder
 bin/nvram_daemon
 bin/nvram_proximity
@@ -187,6 +189,9 @@ lib/hw/libaudio.usb.default.so
 
 
 # Platform
+bin/ipod
+bin/ipohctl
+lib/libipod.so
 lib/libmtk_cipher.so
 lib/libmtk_drvb.so
 lib/libmtk_vt_client.so
@@ -336,7 +341,6 @@ lib/libmpojni.so
 #lib/libhwm.so
 #lib/libhwui.so
 #lib/libinternetradio-jni.so
-#lib/libipod.so
 #lib/libja3m.so
 #lib/libjtranscode.so
 #lib/libkpencore_v52.so

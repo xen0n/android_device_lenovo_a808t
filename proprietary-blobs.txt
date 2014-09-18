@@ -91,6 +91,8 @@ lib/librilutils.so
 lib/libutilrilmtk.so
 lib/mtk-ril.so
 lib/mtk-rilmd2.so
+# ???
+xbin/BGW
 
 
 bin/thermal
@@ -157,12 +159,24 @@ lib/libaudiocomponentengine.so
 lib/libaudiocore.so
 lib/libaudiocustparam.so
 lib/libaudiodcrflt.so
+lib/libaudioflinger.so
 lib/libaudiofp.so
 lib/libaudiosetting.so
 lib/libbessound_hd_mtk.so
 lib/libbessound_mtk.so
 lib/libblisrc.so
 lib/libblisrc32.so
+lib/libmsbc_mtk.so
+lib/libspeech_enh_lib.so
+lib/hw/libaudio.r_submix.default.so
+lib/hw/libaudio.usb.default.so
+lib/soundfx/libaudiopreprocessing.so
+lib/soundfx/libbundlewrapper.so
+lib/soundfx/libdownmix.so
+lib/soundfx/libeffectproxy.so
+lib/soundfx/libldnhncr.so
+lib/soundfx/libreverbwrapper.so
+lib/soundfx/libvisualizer.so
 
 
 # Graphics
@@ -186,14 +200,13 @@ lib/egl/libGLESv2_mali.so
 # HW
 lib/hw/gralloc.mt6592.so
 lib/hw/hwcomposer.mt6592.so
-lib/hw/libaudio.r_submix.default.so
-lib/hw/libaudio.usb.default.so
 
 
 # Platform
 bin/ipod
 bin/ipohctl
 lib/libipod.so
+lib/libssladp.so
 lib/libmtk_cipher.so
 lib/libmtk_drvb.so
 lib/libmtk_vt_client.so
@@ -209,6 +222,7 @@ lib/libmtkshifter.so
 
 
 # ??
+lib/libcvsd_mtk.so
 lib/libmatv_cust.so
 lib/libfeatureio.so
 lib/libimageio.so
@@ -221,11 +235,16 @@ lib/libmpojni.so
 
 # Codec
 lib/libBnMtkCodec.so
+lib/libGdmaScalerPipe.so
 lib/libHEVCdec_sa.ca7.android.so
 lib/libh264dec_customize.so
 lib/libh264dec_sa.ca7.so
 lib/libh264dec_sd.ca7.so
+lib/libJpgDecPipe.so
+lib/libmedia.so
 lib/libMediaEngine.so
+lib/libmhalImageCodec.so
+lib/libmp4enc_sa.ca7.so
 lib/libMtkOmxAMRNBDec.so
 lib/libMtkOmxAMRWBDec.so
 lib/libMtkOmxAacDec.so
@@ -246,43 +265,53 @@ lib/libMtkOmxVenc.so
 lib/libMtkOmxVorbisDec.so
 lib/libMtkOmxVorbisEnc.so
 lib/libMtkVideoTranscoder.so
+lib/libRScpp.so
+lib/libsonivox.so
+lib/libSwJpgCodec.so
 lib/libvc1dec_sa.ca7.so
 lib/libvcodec_oal.so
 lib/libvcodec_utility.so
 lib/libvcodecdrv.so
+lib/libvp8dec_sa.ca7.so
 
 
 # Bluetooth
-#lib/libbluetooth_mtk.so
-#lib/libbluetooth_relayer.so
-#lib/libbluetoothdrv.so
-#lib/libbluetoothem_mtk.so
-#lib/libbt-hci.so
-#lib/libbt-utils.so
-#vendor/lib/hw/audio.a2dp.blueangel.so
-#vendor/lib/hw/bluetooth.blueangel.so
+lib/libbluetooth_mtk.so
+lib/libbluetooth_relayer.so
+lib/libbluetoothdrv.so
+lib/libbluetoothem_mtk.so
+lib/libbt-hci.so
+lib/libbt-utils.so
+lib/libbtcust.so
+lib/libbtcusttable.so
+lib/libbtem.so
+lib/libbtpcm.so
+lib/libbtsession.so
+lib/libbtsniff.so
+vendor/lib/hw/audio.a2dp.blueangel.so
+vendor/lib/hw/bluetooth.blueangel.so
 
 
 # Camera
-#lib/libcam.camadapter.so
-#lib/libcam.campipe.so
-#lib/libcam.camshot.so
-#lib/libcam.client.so
-#lib/libcam.device1.so
-#lib/libcam.exif.so
-#lib/libcam.paramsmgr.so
-#lib/libcam.utils.sensorlistener.so
-#lib/libcam.utils.so
-#lib/libcam_hwutils.so
-#lib/libcam_mmp.so
-#lib/libcam_platform.so
-#lib/libcam_utils.so
-#lib/libcamalgo.so
-#lib/libcamdrv.so
-#lib/libcamera_client.so
-#lib/libcamera_metadata.so
-#lib/libcameracustom.so
-#lib/libcameraservice.so
+lib/libcam.camadapter.so
+lib/libcam.campipe.so
+lib/libcam.camshot.so
+lib/libcam.client.so
+lib/libcam.device1.so
+lib/libcam.exif.so
+lib/libcam.paramsmgr.so
+lib/libcam.utils.sensorlistener.so
+lib/libcam.utils.so
+lib/libcam_hwutils.so
+lib/libcam_mmp.so
+lib/libcam_platform.so
+lib/libcam_utils.so
+lib/libcamalgo.so
+lib/libcamdrv.so
+lib/libcamera_client.so
+lib/libcamera_metadata.so
+lib/libcameracustom.so
+lib/libcameraservice.so
 
 
 # FM Radio
@@ -296,20 +325,24 @@ lib/libfmmt6630.so
 
 
 # Accelerometer (?)
-#lib/libphonemotiondetector.so
-#lib/libphonemotiondetector_jni.so
+lib/libphonemotiondetector.so
+lib/libphonemotiondetector_jni.so
+
+# nonexistent but libphonemotiondetector.so
+# references this?
+#lib/libmotionrecognition.so
 
 
 # Digital Restriction Management
-#lib/drm/libdrmmtkplugin.so
-#lib/libdrmdecrypt.so
-#lib/libdrmmtkutil.so
-#lib/libdrmmtkwhitelist.so
-#vendor/lib/drm/libdrmwvmplugin.so
-#vendor/lib/libWVStreamControlAPI_L3.so
-#vendor/lib/libwvdrm_L3.so
-#vendor/lib/libwvm.so
-#vendor/lib/mediadrm/libwvdrmengine.so
+lib/drm/libdrmmtkplugin.so
+lib/libdrmdecrypt.so
+lib/libdrmmtkutil.so
+lib/libdrmmtkwhitelist.so
+vendor/lib/drm/libdrmwvmplugin.so
+vendor/lib/libWVStreamControlAPI_L3.so
+vendor/lib/libwvdrm_L3.so
+vendor/lib/libwvm.so
+vendor/lib/mediadrm/libwvdrmengine.so
 
 
 # Unknown to me
@@ -327,15 +360,8 @@ lib/libfmmt6630.so
 #lib/libbrctrler.so
 #lib/libbspatch.so
 #lib/ssl/engines/libkeystore.so
-#lib/libbtcust.so
-#lib/libbtcusttable.so
-#lib/libbtem.so
-#lib/libbtpcm.so
-#lib/libbtsession.so
-#lib/libbtsniff.so
 #lib/libbv32.so
 #lib/libc_malloc_debug_mtk.so
-#lib/libcvsd_mtk.so
 #lib/libdb.so
 #lib/libhotknot.so
 #lib/libhotknot_vendor.so
@@ -356,8 +382,6 @@ lib/libfmmt6630.so
 #lib/libmmprofile.so
 #lib/libmmprofile_jni.so
 #lib/libmorpho_groupshot.so
-#lib/libmp4enc_sa.ca7.so
-#lib/libmsbc_mtk.so
 #lib/libmsc-v7.so
 #lib/libmtcloader.so
 #lib/libnativecheck-jni.so
@@ -388,19 +412,11 @@ lib/libfmmt6630.so
 #lib/libvoicerecognition.so
 #lib/libvoicerecognition_jni.so
 #lib/libvorbisidec.so
-#lib/libvp8dec_sa.ca7.so
 #lib/libvt_custom.so
 #lib/libvtmal.so
 #lib/libwapi.so
 #lib/libwebrtc_audio_preprocessing.so
 #lib/libyzs_usc.so
-#lib/soundfx/libaudiopreprocessing.so
-#lib/soundfx/libbundlewrapper.so
-#lib/soundfx/libdownmix.so
-#lib/soundfx/libeffectproxy.so
-#lib/soundfx/libldnhncr.so
-#lib/soundfx/libreverbwrapper.so
-#lib/soundfx/libvisualizer.so
 #lib/libRSSupport.so
 #lib/libWVphoneAPI.so
 #lib/libfrsdk.so
@@ -408,7 +424,6 @@ lib/libfmmt6630.so
 #lib/libvcdecoder_jni.so
 #lib/libvideochat_jni.so
 
-#xbin/BGW
 #xbin/showmap
 #xbin/tcpdump
 

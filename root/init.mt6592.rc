@@ -480,7 +480,6 @@ on post-fs-data
 
     # originally in init.project.rc
     # init some more device nodes
-    chmod 0750 /project-devices.sh
     start setup_project_devices
 
 
@@ -488,6 +487,7 @@ on boot
    chown root /remount.sh
    chmod 700 /remount.sh
    exec /remount.sh
+    chmod 0750 /project-devices.sh
 
    start drvbd
 
@@ -690,7 +690,7 @@ on property:persist.uartconsole.enable=1
 
 
 # originally bulk of init.project.rc
-service setup_project_devices /system/bin/logwrapper /project-devices.sh
+service setup_project_devices /system/bin/logwrapper /system/bin/sh /project-devices.sh
     user root
     group root
     class main

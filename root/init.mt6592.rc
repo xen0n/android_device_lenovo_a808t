@@ -479,6 +479,11 @@ on post-fs-data
 # End of adding by MTK drivers
 # -----------------------
 
+    # originally in init.project.rc
+    # init some more device nodes
+    chmod 0750 /project-devices.sh
+    start setup_project_devices
+
 
 on boot
    chown root /remount.sh
@@ -637,10 +642,6 @@ on boot
     class_start default
 
 
-# BATTERY proc
-    chown shell system /proc/mtk_battery_cmd/battery_cmd
-
-
 on property:vold.decrypt=trigger_reset_main
     write /sys/class/leds/lcd-backlight/brightness  0
 
@@ -687,6 +688,40 @@ on property:persist.uartconsole.enable=1
 # Update the second boot logo
 #service bootlogoupdater /system/bin/boot_logo_updater
 #    oneshot
+
+
+# originally bulk of init.project.rc
+service setup_project_devices /system/bin/logwrapper /project-devices.sh
+    user root
+    group root
+    class main
+    disabled
+    oneshot
+
+# other init.project.rc services
+# for proximity sensor cali usage merge from avene-w --by lenovo huangdra 20130424
+service nvram_proximity /system/bin/nvram_proximity
+    user root
+    oneshot
+#for proximity sensor cali usage merge from avene-w --by lenovo huangdra 20130424
+#
+# Connectivity related services (Begin)
+#
+
+service wmtLoader /system/bin/logwrapper /system/bin/wmt_loader
+    user root
+    group root
+    class main
+    oneshot
+
+
+service conn_launcher /system/bin/logwrapper /system/bin/6620_launcher -p /system/etc/firmware/
+    user system
+    group system
+    class core
+#
+# Connectivity related services (End)
+#
 
 
 on property:selinux.reload_policy=1

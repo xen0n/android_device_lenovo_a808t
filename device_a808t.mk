@@ -26,7 +26,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/root/init.charging.rc:root/init.charging.rc \
     $(LOCAL_PATH)/root/init.fuse.rc:root/init.fuse.rc \
     $(LOCAL_PATH)/root/init.modem.rc:root/init.modem.rc \
-    $(LOCAL_PATH)/root/init.project.rc:root/init.project.rc \
     $(LOCAL_PATH)/root/init.protect.rc:root/init.protect.rc \
     $(LOCAL_PATH)/root/init.mt6592.rc:root/init.mt6592.rc \
     $(LOCAL_PATH)/root/init.mt6592.usb.rc:root/init.mt6592.usb.rc \

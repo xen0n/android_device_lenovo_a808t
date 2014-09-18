@@ -1129,23 +1129,23 @@ service emd_daemon /system/bin/emd_daemon
 
 
 # (A)GPS, commented out for now
-##service agpsdcainit /system/bin/agpscacertinit
-##    class main
-##    oneshot
-#
-#service agpsd /system/bin/mtk_agpsd
+#service agpsdcainit /system/bin/agpscacertinit
 #    class main
-#    socket agpsd stream 660 gps system
-#    socket agpsd2 stream 660 gps system
-#    socket agpsd3 stream 660 gps system
-#    user gps
-#    group gps ccci inet sdcard_r sdcard_rw misc
-#
-#service mnld /system/xbin/mnld
-#    user gps
-#    group nvram gps inet misc sdcard_rw sdcard_r media_rw
-#    socket mnld stream 660 gps system
-#    disabled
+#    oneshot
+
+service agpsd /system/bin/mtk_agpsd
+    class main
+    socket agpsd stream 660 gps system
+    socket agpsd2 stream 660 gps system
+    socket agpsd3 stream 660 gps system
+    user gps
+    group gps ccci inet sdcard_r sdcard_rw misc
+
+service mnld /system/xbin/mnld
+    user gps
+    group nvram gps inet misc sdcard_rw sdcard_r media_rw
+    socket mnld stream 660 gps system
+    disabled
 
 
 service ipod /system/bin/ipod

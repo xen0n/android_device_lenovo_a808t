@@ -5,83 +5,19 @@ on early-init
     chown shell system /proc/mtk_battery_cmd/current_cmd
     chown shell system /proc/mtk_battery_cmd/discharging_cmd
 
-on init
 
 on post-fs-data
-
-#
-# Connectivity related device nodes & configuration (begin)
-#
-
-#lenovo-sw yexm1 add 20140324, for lenovo fm radio app  do not support RDS begin
-    setprop persist.lenovo.fmradio.rds off
-#lenovo-sw yexm1 add 20140324, for lenovo fm radio app  do not support RDS end
-
-#/dev/ttyMT2 for Connectivity BT/FM/GPS usage
-    chmod 0660 /dev/ttyMT2
-    chown system system /dev/ttyMT2
+    chmod 0750 /project-devices.sh
+	start setup_project_devices
 
 
-# STP, WMT, GPS, FM and BT Driver
-#   insmod /system/lib/modules/mtk_hif_sdio.ko
-#   insmod /system/lib/modules/mtk_stp_wmt.ko
-#   insmod /system/lib/modules/mtk_stp_uart.ko
-#   insmod /system/lib/modules/mtk_stp_gps.ko
-#   insmod /system/lib/modules/mtk_stp_bt.ko
-#   insmod /system/lib/modules/mtk_fm_drv.ko
-#   insmod /system/lib/modules/mtk_wmt_wifi.ko
+service setup_project_devices /system/bin/logwrapper /project-devices.sh
+	user root
+	group root
+	class main
+	disabled
+	oneshot
 
-    insmod /system/lib/modules/mtk_wmt_detect.ko
-
-# Create char device file for WMT, GPS, BT, FM, WIFI
-    exec /system/bin/sh /makestpnodes.sh
-
-    chmod 0660 /dev/stpwmt
-    chown system system /dev/stpwmt
-
-    chmod 0660 /dev/wmtdetect
-    chown system system /dev/wmtdetect
-
-    exec mknod /dev/wmtWifi c 153 0
-    chmod 0660 /dev/wmtWifi
-    chown system system /dev/wmtWifi
-
-#Camera
-    chmod 0660 /dev/LC898122AF
-    chown system camera /dev/LC898122AF
-# BT
-    chmod 0660 /dev/stpbt
-    chown bluetooth radio /dev/stpbt
-
-# GPS
-    chown gps gps /dev/stpgps
-    chown gps gps /sys/class/gpsdrv/gps/pwrctl
-    chown gps gps /sys/class/gpsdrv/gps/suspend
-    chown gps gps /sys/class/gpsdrv/gps/state
-    chown gps gps /sys/class/gpsdrv/gps/pwrsave
-    chown gps gps /sys/class/gpsdrv/gps/status
-    chmod 0660 /dev/stpgps
-
-# WiFi
-    mkdir /data/misc/wifi 0770 wifi wifi
-    mkdir /data/misc/wifi/sockets 0770 wifi wifi
-    mkdir /data/misc/wpa_supplicant 0770 wifi wifi
-    chown wifi wifi /data/misc/wifi
-
-#Disable for one Single loader
-# Load WiFi Driver
-#   insmod /system/lib/modules/wlan.ko
-
-# Char device for BT 3.0 HS
-    exec mknod /dev/ampc0 c 151 0
-    chown bluetooth bluetooth /dev/ampc0
-    chmod 0660 /dev/ampc0
-
-#lenovo-sw xuwen1 add 20140106 for slide_wakeup
-    chown system system /sys/board_properties/tpd_suspend_status
-
-#
-# Connectivity related device nodes & configuration (end)
 
 on boot
     # Refer to http://source.android.com/devices/tech/storage/index.html

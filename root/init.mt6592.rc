@@ -189,7 +189,7 @@ on post-fs-data
 
     # M4U
     #insmod /system/lib/modules/m4u.ko
-    #exec mknod /dev/M4U_device c 188 0
+    #exec /system/xbin/busybox mknod /dev/M4U_device c 188 0
     chmod 0444 /dev/M4U_device
     #chown system media /dev/M4U_device
 
@@ -233,13 +233,13 @@ on post-fs-data
 
     #VideoCodec
     #insmod /system/lib/modules/vcodec_kernel_driver.ko
-    exec mknod /dev/Vcodec c 160 0
+    exec /system/xbin/busybox mknod /dev/Vcodec c 160 0
     chmod 0660 /dev/Vcodec
     chown system media /dev/Vcodec
 
     #MJC
     #insmod /system/lib/modules/mjc_kernel_driver.ko
-    #exec mknod /dev/MJC c 168 0
+    #exec /system/xbin/busybox mknod /dev/MJC c 168 0
     chmod 0660 /dev/MJC
     chown system media /dev/MJC
 
@@ -314,12 +314,12 @@ on post-fs-data
     mkdir /data/misc/ppp 0770 bluetooth net_bt
 
     # Android SEC related device nodes
-    exec mknod /dev/sec c 182 0
+    exec /system/xbin/busybox mknod /dev/sec c 182 0
     chmod 0660 /dev/sec
     chown root system /dev/sec
 
     # FM Radio device node
-    exec mknod /dev/fm     c 193 0
+    exec /system/xbin/busybox mknod /dev/fm     c 193 0
     chmod 0660 /dev/fm
     chown system media /dev/fm
 
@@ -328,7 +328,7 @@ on post-fs-data
 
     # device info /proc interface
     #insmod /system/lib/modules/devinfo.ko
-    exec mknod /dev/devmap c 196 0
+    exec /system/xbin/busybox mknod /dev/devmap c 196 0
     chmod 0440 /dev/devmap
     chown root system /dev/devmap
 

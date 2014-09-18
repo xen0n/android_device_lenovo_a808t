@@ -56,6 +56,8 @@ lib/libnvramagentclient.so
 
 # wifi
 bin/wlan_loader
+lib/libpalsecurity.so
+lib/libpalwlan_mtk.so
 lib/libwifitest.so
 
 
@@ -102,7 +104,7 @@ xbin/libmnlp_mt6592
 xbin/mnld
 lib/libmnl.so
 
-#etc/agps_profiles_conf.xml
+etc/agps_profiles_conf.xml
 
 
 # firmware
@@ -131,7 +133,7 @@ etc/mddb/BPLGUInfoCustomAppSrcP_MT6290_S01_A808T_V38_5_ltg_n
 
 
 # FM Radio
-#etc/fmr/mt6627_fm_cust.cfg
+etc/fmr/mt6627_fm_cust.cfg
 
 
 # FangZheng LanTingHei
@@ -218,37 +220,36 @@ lib/libmpojni.so
 
 
 # Codec
-#lib/libBnMtkCodec.so
-#lib/libHEVCdec_sa.ca7.android.so
-#lib/libh264dec_customize.so
-#lib/libh264dec_sa.ca7.so
-#lib/libh264dec_sd.ca7.so
-#lib/libMediaEngine.so
-#lib/libMtkOmxAMRNBDec.so
-#lib/libMtkOmxAMRWBDec.so
-#lib/libMtkOmxAacDec.so
-#lib/libMtkOmxAacEnc.so
-#lib/libMtkOmxAdpcmDec.so
-#lib/libMtkOmxAdpcmEnc.so
-#lib/libMtkOmxAmrEnc.so
-#lib/libMtkOmxApeDec.so
-#lib/libMtkOmxAwbEnc.so
-#lib/libMtkOmxCore.so
-#lib/libMtkOmxFlacDec.so
-#lib/libMtkOmxG711Dec.so
-#lib/libMtkOmxGsmDec.so
-#lib/libMtkOmxMp3Dec.so
-#lib/libMtkOmxRawDec.so
-#lib/libMtkOmxVdec.so
-#lib/libMtkOmxVenc.so
-#lib/libMtkOmxVorbisDec.so
-#lib/libMtkOmxVorbisEnc.so
-#lib/libMtkVideoTranscoder.so
-# ??
-#lib/libvc1dec_sa.ca7.so
-#lib/libvcodec_oal.so
-#lib/libvcodec_utility.so
-#lib/libvcodecdrv.so
+lib/libBnMtkCodec.so
+lib/libHEVCdec_sa.ca7.android.so
+lib/libh264dec_customize.so
+lib/libh264dec_sa.ca7.so
+lib/libh264dec_sd.ca7.so
+lib/libMediaEngine.so
+lib/libMtkOmxAMRNBDec.so
+lib/libMtkOmxAMRWBDec.so
+lib/libMtkOmxAacDec.so
+lib/libMtkOmxAacEnc.so
+lib/libMtkOmxAdpcmDec.so
+lib/libMtkOmxAdpcmEnc.so
+lib/libMtkOmxAmrEnc.so
+lib/libMtkOmxApeDec.so
+lib/libMtkOmxAwbEnc.so
+lib/libMtkOmxCore.so
+lib/libMtkOmxFlacDec.so
+lib/libMtkOmxG711Dec.so
+lib/libMtkOmxGsmDec.so
+lib/libMtkOmxMp3Dec.so
+lib/libMtkOmxRawDec.so
+lib/libMtkOmxVdec.so
+lib/libMtkOmxVenc.so
+lib/libMtkOmxVorbisDec.so
+lib/libMtkOmxVorbisEnc.so
+lib/libMtkVideoTranscoder.so
+lib/libvc1dec_sa.ca7.so
+lib/libvcodec_oal.so
+lib/libvcodec_utility.so
+lib/libvcodecdrv.so
 
 
 # Bluetooth
@@ -285,13 +286,13 @@ lib/libmpojni.so
 
 
 # FM Radio
-#lib/libfm_gpio_jni.so
-#lib/libfmcust.so
-#lib/libfmjni.so
-#lib/libfmmt6620.so
-#lib/libfmmt6627.so
-#lib/libfmmt6628.so
-#lib/libfmmt6630.so
+lib/libfm_gpio_jni.so
+lib/libfmcust.so
+lib/libfmjni.so
+lib/libfmmt6620.so
+lib/libfmmt6627.so
+lib/libfmmt6628.so
+lib/libfmmt6630.so
 
 
 # Accelerometer (?)
@@ -361,8 +362,6 @@ lib/libmpojni.so
 #lib/libmtcloader.so
 #lib/libnativecheck-jni.so
 #lib/libopengl.so
-#lib/libpalsecurity.so
-#lib/libpalwlan_mtk.so
 #lib/libperfservice.so
 #lib/libperfservice_jni.so
 #lib/libperfservicenative.so

@@ -20,43 +20,43 @@ on post-fs-data
     setprop vold.post_fs_data_done 1
     
 service autokd /system/bin/autokd
-    class core
+    class main
     user system 
     group nvram ccci system
     
 service gsm0710muxd /system/bin/gsm0710muxd -s /dev/eemcs_mux -f 512 -n 8 -m basic
-    class core
+    class main
     user root
     group radio cache inet misc ccci
     disabled
 
 service gsm0710muxd-s /system/bin/gsm0710muxd-s -s /dev/eemcs_mux -f 512 -n 8 -m basic
-    class core
+    class main
     user root
     group radio cache inet misc ccci
     disabled
     
 service gsm0710muxd-d /system/bin/gsm0710muxd-d -s /dev/eemcs_mux -f 512 -n 8 -m basic
-    class core
+    class main
     user root
     group radio cache inet misc ccci
     disabled
 
 service gsm0710muxdmd2 /system/bin/gsm0710muxdmd2 -s /dev/ccci2_tty0 -f 512 -n 8 -m basic
-    class core
+    class main
     user root
     group radio cache inet misc ccci
     disabled
 
 service muxreport-daemon /system/bin/muxreport
-    class core
+    class main
     user radio
     group radio cache inet misc ccci
     disabled
     oneshot
 
 service ril-daemon /system/bin/rild
-    class core
+    class main
     socket rild stream 660 root radio
     socket rild2 stream 660 root radio
     socket rild3 stream 660 root radio
@@ -69,10 +69,14 @@ service ril-daemon /system/bin/rild
     socket rild-atci stream 660 root radio
     user root
     group radio cache inet misc audio sdcard_r sdcard_rw log ccci system
-    disabled
+
+	# In MTK, ril-daemon seems to be brought up with some unknown native
+	# code presumably handling radio service deps...
+	# Here we should let the system do the work instead.
+    # disabled
 
 service ril-daemon-s /system/bin/rild-s
-    class core
+    class main
     socket rild stream 660 root radio
     socket rild2 stream 660 root radio
     socket rild3 stream 660 root radio
@@ -88,7 +92,7 @@ service ril-daemon-s /system/bin/rild-s
     disabled
     
 service ril-daemon-d /system/bin/rild-d
-    class core
+    class main
     socket rild stream 660 root radio
     socket rild2 stream 660 root radio
     socket rild3 stream 660 root radio
@@ -104,7 +108,7 @@ service ril-daemon-d /system/bin/rild-d
     disabled
 
 service ril-daemon-md2 /system/bin/rildmd2
-    class core
+    class main
     socket rild-md2 stream 660 root radio
     socket rild2-md2 stream 660 root radio
     socket rild-debug-md2 stream 660 radio system
@@ -135,13 +139,13 @@ service md_minilog_util /system/bin/md_minilog_util
 service eemcs_fsd /system/bin/eemcs_fsd 0
     user ccci
     group  nvram ccci system
-    class core
+    class main
     oneshot
 
 service eemcs_mdinit /system/bin/eemcs_mdinit 0
     user system
     group  nvram ccci system
-    class core
+    class main
     oneshot
 
 
@@ -167,7 +171,7 @@ service pppd /system/bin/pppd file /data/misc/ppp/ppp_options
 #   Telephony Early Read service (added by vend_hp.chen)
 #
 service terservice /system/bin/terservice
-    class core
+    class main
     user radio
     group radio cache inet misc ccci
     oneshot

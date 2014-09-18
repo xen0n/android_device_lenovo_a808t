@@ -37,7 +37,7 @@ chown system:system /dev/ttyMT2
 #insmod /system/lib/modules/mtk_fm_drv.ko
 #insmod /system/lib/modules/mtk_wmt_wifi.ko
 
-insmod /system/lib/modules/mtk_wmt_detect.ko
+#insmod /system/lib/modules/mtk_wmt_detect.ko
 
 #Camera
 chmod 0660 /dev/LC898122AF

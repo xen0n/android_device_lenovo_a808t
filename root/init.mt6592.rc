@@ -808,12 +808,6 @@ service pq /system/bin/pq
     group system graphics
     oneshot    
 
-service surfaceflinger /system/bin/surfaceflinger
-    class main
-#    user system
-    group graphics
-    onrestart restart zygote
-
 service aal /system/bin/aal
     class main
     user system

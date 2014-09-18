@@ -1020,7 +1020,7 @@ service PPLAgent /system/bin/ppl_agent
 #    group drm system audio sdcard_rw net_raw inet drmrpc media sdcard_r media_rw
 
 
-# XXX: also overridden
+# overridden in init.rc
 #service media /system/bin/mediaserver
 #    group audio camera graphics inet net_bt net_bt_admin net_bw_acct drmrpc media sdcard_r nvram ccci radio system
 

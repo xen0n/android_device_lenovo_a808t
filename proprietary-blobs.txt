@@ -161,6 +161,13 @@ lib/libblisrc32.so
 
 
 # Graphics
+bin/bwc
+#bin/aal  # nonexistent on A808t
+bin/pq
+bin/vtservice
+lib/libaal.so
+lib/libaal_cust.so
+lib/libbwc.so
 lib/libdpframework.so
 lib/libion.so
 lib/libm4u.so
@@ -194,7 +201,6 @@ lib/libmtkshifter.so
 
 
 # ??
-lib/libbwc.so
 lib/libmatv_cust.so
 lib/libfeatureio.so
 lib/libimageio.so
@@ -301,8 +307,6 @@ lib/libmpojni.so
 
 # Unknown to me
 #lib/liba3m.so
-#lib/libaal.so
-#lib/libaal_cust.so
 #lib/libaccount.so
 #lib/libacdk.so
 #lib/libaiengine-arm-and.so

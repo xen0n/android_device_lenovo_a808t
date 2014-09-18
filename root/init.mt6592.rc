@@ -1374,16 +1374,16 @@ service poad /system/bin/poad
 #	user root
 
 
-#service BGW /system/xbin/BGW
-#	user system
-#	group gps system ccci
-#	class main
+service BGW /system/xbin/BGW
+	user system
+	group gps system ccci
+	class main
 
 
-#service MtkCodecService /system/bin/MtkCodecService
-#    class main
-#    user root
-#    group audio media sdcard_r
+service MtkCodecService /system/bin/MtkCodecService
+    class main
+    user root
+    group audio media sdcard_r
 
 
 ##lenovo-sw chuyq 2014.3.17 added for customsn

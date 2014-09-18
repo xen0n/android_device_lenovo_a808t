@@ -1,6 +1,7 @@
 #!/system/bin/sh
 
-PATH=/system/bin
+# mknod is not present in stock Android, let's use busybox
+PATH=/system/xbin
 
 
 chmod 0660 /dev/stpwmt

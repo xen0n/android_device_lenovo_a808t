@@ -1241,14 +1241,14 @@ service geomagneticd /system/bin/geomagneticd
     user system
     group system input
     class main
-    
+
 service mc64xxd /system/bin/mc64xxd
     disabled
     user system
     group system
     class main
-    
-        
+
+
 #
 #sensor service (end)
 #

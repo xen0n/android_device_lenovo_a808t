@@ -31,7 +31,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/root/init.mt6592.rc:root/init.mt6592.rc \
     $(LOCAL_PATH)/root/init.mt6592.usb.rc:root/init.mt6592.usb.rc \
     $(LOCAL_PATH)/root/init.xlog.rc:root/init.xlog.rc \
-    $(LOCAL_PATH)/root/ueventd.mt6592.rc:root/ueventd.mt6592.rc
+    $(LOCAL_PATH)/root/ueventd.mt6592.rc:root/ueventd.mt6592.rc \
+    $(LOCAL_PATH)/root/makestpnodes.sh:root/makestpnodes.sh \
 
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \

@@ -153,7 +153,7 @@ etc/fmr/mt6627_fm_cust.cfg
 
 # Audio
 lib/libaudio-resampler.so
-lib/libaudio.primary.default.so
+#lib/libaudio.primary.default.so
 lib/libaudiocompensationfilter.so
 lib/libaudiocomponentengine.so
 lib/libaudiocore.so
@@ -168,8 +168,8 @@ lib/libblisrc.so
 lib/libblisrc32.so
 lib/libmsbc_mtk.so
 lib/libspeech_enh_lib.so
-lib/hw/libaudio.r_submix.default.so
-lib/hw/libaudio.usb.default.so
+#lib/hw/libaudio.r_submix.default.so
+#lib/hw/libaudio.usb.default.so
 #lib/soundfx/libaudiopreprocessing.so
 #lib/soundfx/libbundlewrapper.so
 #lib/soundfx/libdownmix.so

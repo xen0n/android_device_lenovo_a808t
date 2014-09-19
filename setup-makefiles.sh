@@ -73,6 +73,16 @@ LINEEND=""
 echo " $OUTDIR/proprietary/$FILE:system/$FILE$LINEEND" >> $MAKEFILE
 done
 
+
+# hackywhacky
+echo "PRODUCT_COPY_FILES += \\" >> $MAKEFILE
+echo " $OUTDIR/proprietary/lib/hw/audio_policy.mt6592.so:system/lib/hw/audio_policy.mt6592.so \\" >> $MAKEFILE
+echo " $OUTDIR/proprietary/lib/hw/audio.primary.mt6592.so:system/lib/hw/audio.primary.mt6592.so \\" >> $MAKEFILE
+echo " $OUTDIR/proprietary/lib/hw/audio.r_submix.mt6592.so:system/lib/hw/audio.r_submix.mt6592.so \\" >> $MAKEFILE
+echo " $OUTDIR/proprietary/lib/hw/audio.usb.mt6592.so:system/lib/hw/audio.usb.mt6592.so \\" >> $MAKEFILE
+echo "" >> $MAKEFILE
+
+
 (cat << EOF) > ../../../vendor/$VENDOR/$DEVICE/proprietary/lib/Android.mk
 
 # Copyright (C) 2014 The Android Open Source Project

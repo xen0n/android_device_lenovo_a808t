@@ -5,6 +5,25 @@ set -e
 VENDOR=lenovo
 DEVICE=a808t
 
+extract_blob () {
+    local SRC
+    local BASE
+    local FILE
+    local DEST
+
+    SRC=$1
+    BASE=$2
+    FILE=$3
+    DEST=$4
+
+    if [ "$SRC" = "adb" ]; then
+        adb pull "/system/$FILE" "$BASE/$DEST"
+    else
+        cp "$SRC/system/$FILE" "$BASE/$DEST"
+    fi
+}
+
+
 if [ $# -eq 1 ]; then
     COPY_FROM=$1
     test ! -d "$COPY_FROM" && echo error reading dir "$COPY_FROM" && exit 1
@@ -34,12 +53,8 @@ for FILE in `cat proprietary-blobs.txt | grep -v ^# | grep -v ^$ | grep -v ^-`; 
     if [ ! -d $BASE/$DIR ]; then
         mkdir -p $BASE/$DIR
     fi
-    if [ "$SRC" = "adb" ]; then
-      adb pull /system/$FILE $BASE/$FILE
-    else
-      cp $SRC/system/$FILE $BASE/$FILE
-    fi
 
+    extract_blob "$SRC" "$BASE" "$FILE" "$FILE"
 done
 
 ./setup-makefiles.sh

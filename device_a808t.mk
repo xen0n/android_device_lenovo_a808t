@@ -99,8 +99,11 @@ PRODUCT_PACKAGES += \
 
 # audio
 PRODUCT_PACKAGES += \
-    audio.r_submix.default \
-    libblisrc
+    libblisrc \
+    # audio.r_submix.default \
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio_policy.conf:system/etc/audio_policy.conf \
 
 
 # media

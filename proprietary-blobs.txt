@@ -170,13 +170,13 @@ lib/libmsbc_mtk.so
 lib/libspeech_enh_lib.so
 lib/hw/libaudio.r_submix.default.so
 lib/hw/libaudio.usb.default.so
-lib/soundfx/libaudiopreprocessing.so
-lib/soundfx/libbundlewrapper.so
-lib/soundfx/libdownmix.so
-lib/soundfx/libeffectproxy.so
-lib/soundfx/libldnhncr.so
-lib/soundfx/libreverbwrapper.so
-lib/soundfx/libvisualizer.so
+#lib/soundfx/libaudiopreprocessing.so
+#lib/soundfx/libbundlewrapper.so
+#lib/soundfx/libdownmix.so
+#lib/soundfx/libeffectproxy.so
+#lib/soundfx/libldnhncr.so
+#lib/soundfx/libreverbwrapper.so
+#lib/soundfx/libvisualizer.so
 
 
 # Graphics
@@ -241,7 +241,7 @@ lib/libh264dec_customize.so
 lib/libh264dec_sa.ca7.so
 lib/libh264dec_sd.ca7.so
 lib/libJpgDecPipe.so
-lib/libmedia.so
+#lib/libmedia.so
 lib/libMediaEngine.so
 lib/libmhalImageCodec.so
 lib/libmp4enc_sa.ca7.so

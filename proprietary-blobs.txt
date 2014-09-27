@@ -1,3 +1,5 @@
+bin/custom_sn
+
 bin/6620_launcher
 bin/6620_wmt_concurrency
 bin/6620_wmt_lpbk
@@ -47,6 +49,8 @@ bin/nvram_proximity
 lib/libcustom_jni.so
 lib/libcustom_nvram.so
 lib/libcustom_prop.so
+lib/libfile_op.so
+lib/libhwm.so
 lib/libnvram.so
 lib/libnvram_daemon_callback.so
 lib/libnvram_platform.so
@@ -154,18 +158,30 @@ etc/fmr/mt6627_fm_cust.cfg
 # Audio
 lib/libaudio-resampler.so
 #lib/libaudio.primary.default.so
+
+# this would not compile, we have to use the blob
 lib/libaudiocompensationfilter.so
+
 lib/libaudiocomponentengine.so
 lib/libaudiocore.so
+
+# symbol _ZN7android34GetHiFiDACControlOptionParamFromNVEP34AUDIO_AUDENH_CONTROL_OPTION_STRUCT is needed by audio.primary.mt6592
 lib/libaudiocustparam.so
+
 lib/libaudiodcrflt.so
+
+# so what? calling convention?
 #lib/libaudioflinger.so
+
+#lib/libnbaio.so -- this seems to break ABI, need to implement the stub manually
+
 lib/libaudiofp.so
-lib/libaudiosetting.so
+#lib/libaudiosetting.so
 lib/libbessound_hd_mtk.so
 lib/libbessound_mtk.so
 lib/libblisrc.so
 lib/libblisrc32.so
+#lib/libcvsd_mtk.so
 lib/libmsbc_mtk.so
 lib/libspeech_enh_lib.so
 #lib/hw/libaudio.r_submix.default.so
@@ -177,6 +193,9 @@ lib/libspeech_enh_lib.so
 #lib/soundfx/libldnhncr.so
 #lib/soundfx/libreverbwrapper.so
 #lib/soundfx/libvisualizer.so
+
+# required by audio.usb.mt6592.so
+#lib/libtinyalsa.so
 
 
 # Graphics
@@ -365,7 +384,6 @@ vendor/lib/mediadrm/libwvdrmengine.so
 #lib/libdb.so
 #lib/libhotknot.so
 #lib/libhotknot_vendor.so
-#lib/libhwm.so
 #lib/libhwui.so
 #lib/libinternetradio-jni.so
 #lib/libja3m.so
@@ -401,7 +419,6 @@ vendor/lib/mediadrm/libwvdrmengine.so
 #lib/libsmschecker-1.0.1.so
 #lib/libsmsparser-1.0.0.so
 #lib/libthermalstress_jni.so
-#lib/libtinyalsa.so
 #lib/libudid.so
 #lib/libupomp_lthj_JniMethod.so
 #lib/libusedes.so

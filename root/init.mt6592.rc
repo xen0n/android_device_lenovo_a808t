@@ -1387,7 +1387,7 @@ service MtkCodecService /system/bin/MtkCodecService
 
 
 ##lenovo-sw chuyq 2014.3.17 added for customsn
-#service custom_sn /system/bin/custom_sn
-#    class main
-#    oneshot
+service custom_sn /system/bin/custom_sn
+    class main
+    oneshot
 ##lenovo-sw chuyq 2014.3.17 added forcustomsn end

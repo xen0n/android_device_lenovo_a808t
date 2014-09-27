@@ -76,8 +76,8 @@ done
 
 # hackywhacky
 echo "PRODUCT_COPY_FILES += \\" >> $MAKEFILE
-echo " $OUTDIR/proprietary/lib/hw/audio_policy.mt6592.so:system/lib/hw/audio_policy.mt6592.so \\" >> $MAKEFILE
-echo " $OUTDIR/proprietary/lib/hw/audio.primary.mt6592.so:system/lib/hw/audio.primary.mt6592.so \\" >> $MAKEFILE
+#echo " $OUTDIR/proprietary/lib/hw/audio_policy.mt6592.so:system/lib/hw/audio_policy.mt6592.so \\" >> $MAKEFILE
+#echo " $OUTDIR/proprietary/lib/hw/audio.primary.mt6592.so:system/lib/hw/audio.primary.mt6592.so \\" >> $MAKEFILE
 echo " $OUTDIR/proprietary/lib/hw/audio.r_submix.mt6592.so:system/lib/hw/audio.r_submix.mt6592.so \\" >> $MAKEFILE
 echo " $OUTDIR/proprietary/lib/hw/audio.usb.mt6592.so:system/lib/hw/audio.usb.mt6592.so \\" >> $MAKEFILE
 echo "" >> $MAKEFILE
@@ -112,5 +112,109 @@ LOCAL_MODULE_PATH := \$(TARGET_OUT_SHARED_LIBRARIES)
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_OWNER := MTK
 include \$(BUILD_PREBUILT)
+
+
+# NVRAM things
+include \$(CLEAR_VARS)
+LOCAL_MODULE := libnvram
+LOCAL_SRC_FILES := \
+    libnvram.so
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := \$(TARGET_OUT_SHARED_LIBRARIES)
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_OWNER := MTK
+include \$(BUILD_PREBUILT)
+
+include \$(CLEAR_VARS)
+LOCAL_MODULE := libnvram_daemon_callback
+LOCAL_SRC_FILES := \
+    libnvram_daemon_callback.so
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := \$(TARGET_OUT_SHARED_LIBRARIES)
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_OWNER := MTK
+include \$(BUILD_PREBUILT)
+
+include \$(CLEAR_VARS)
+LOCAL_MODULE := libcustom_nvram
+LOCAL_SRC_FILES := \
+    libcustom_nvram.so
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := \$(TARGET_OUT_SHARED_LIBRARIES)
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_OWNER := MTK
+include \$(BUILD_PREBUILT)
+
+
+# audio things
+include \$(CLEAR_VARS)
+LOCAL_MODULE := libbessound_mtk
+LOCAL_SRC_FILES := \
+    libbessound_mtk.so
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := \$(TARGET_OUT_SHARED_LIBRARIES)
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_OWNER := MTK
+include \$(BUILD_PREBUILT)
+
+include \$(CLEAR_VARS)
+LOCAL_MODULE := libbessound_hd_mtk
+LOCAL_SRC_FILES := \
+    libbessound_hd_mtk.so
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := \$(TARGET_OUT_SHARED_LIBRARIES)
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_OWNER := MTK
+include \$(BUILD_PREBUILT)
+
+include \$(CLEAR_VARS)
+LOCAL_MODULE := libaudiocompensationfilter
+LOCAL_SRC_FILES := \
+    libaudiocompensationfilter.so
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := \$(TARGET_OUT_SHARED_LIBRARIES)
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_OWNER := MTK
+include \$(BUILD_PREBUILT)
+
+include \$(CLEAR_VARS)
+LOCAL_MODULE := libaudiocustparam
+LOCAL_SRC_FILES := \
+    libaudiocustparam.so
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := \$(TARGET_OUT_SHARED_LIBRARIES)
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_OWNER := MTK
+include \$(BUILD_PREBUILT)
+
+include \$(CLEAR_VARS)
+LOCAL_MODULE := libaudiocomponentengine
+LOCAL_SRC_FILES := \
+    libaudiocomponentengine.so
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := \$(TARGET_OUT_SHARED_LIBRARIES)
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_OWNER := MTK
+include \$(BUILD_PREBUILT)
+
+include \$(CLEAR_VARS)
+LOCAL_MODULE := libaudiodcrflt
+LOCAL_SRC_FILES := \
+    libaudiodcrflt.so
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := \$(TARGET_OUT_SHARED_LIBRARIES)
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_OWNER := MTK
+include \$(BUILD_PREBUILT)
+
 
 EOF

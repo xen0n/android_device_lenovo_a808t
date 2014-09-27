@@ -59,7 +59,7 @@ done
 
 
 # extract audio libraries with nonstandard filenames, renaming along the way
-extract_blob "$SRC" "$BASE" lib/hw/audio_policy.default.so lib/hw/audio_policy.mt6592.so
+#extract_blob "$SRC" "$BASE" lib/hw/audio_policy.default.so lib/hw/audio_policy.mt6592.so
 extract_blob "$SRC" "$BASE" lib/libaudio.primary.default.so lib/hw/audio.primary.mt6592.so
 extract_blob "$SRC" "$BASE" lib/hw/libaudio.r_submix.default.so lib/hw/audio.r_submix.mt6592.so
 extract_blob "$SRC" "$BASE" lib/hw/libaudio.usb.default.so lib/hw/audio.usb.mt6592.so

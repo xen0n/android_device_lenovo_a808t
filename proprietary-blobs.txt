@@ -156,6 +156,14 @@ etc/fmr/mt6627_fm_cust.cfg
 
 
 # Audio
+# i really don't want this
+bin/mediaserver
+lib/libmemorydumper.so
+
+# seriously...
+lib/libhardware.so
+lib/libhardware_legacy.so
+
 lib/libaudio-resampler.so
 #lib/libaudio.primary.default.so
 
@@ -171,7 +179,7 @@ lib/libaudiocustparam.so
 lib/libaudiodcrflt.so
 
 # so what? calling convention?
-#lib/libaudioflinger.so
+lib/libaudioflinger.so
 
 #lib/libnbaio.so -- this seems to break ABI, need to implement the stub manually
 

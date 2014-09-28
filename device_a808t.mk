@@ -100,12 +100,12 @@ PRODUCT_PACKAGES += \
 # audio
 PRODUCT_PACKAGES += \
     libblisrc \
-    audio.r_submix.default \
-    audio.primary.mt6592 \
-    audio_policy.mt6592 \
     libaudiocompensationfilter \
     libaudiocustparam \
     libaudiosetting \
+    # audio.r_submix.default \
+    # audio.primary.mt6592 \
+    # audio_policy.mt6592 \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio_policy.conf:system/etc/audio_policy.conf \

@@ -76,8 +76,8 @@ done
 
 # hackywhacky
 echo "PRODUCT_COPY_FILES += \\" >> $MAKEFILE
-#echo " $OUTDIR/proprietary/lib/hw/audio_policy.mt6592.so:system/lib/hw/audio_policy.mt6592.so \\" >> $MAKEFILE
-#echo " $OUTDIR/proprietary/lib/hw/audio.primary.mt6592.so:system/lib/hw/audio.primary.mt6592.so \\" >> $MAKEFILE
+echo " $OUTDIR/proprietary/lib/hw/audio_policy.mt6592.so:system/lib/hw/audio_policy.mt6592.so \\" >> $MAKEFILE
+echo " $OUTDIR/proprietary/lib/hw/audio.primary.mt6592.so:system/lib/hw/audio.primary.mt6592.so \\" >> $MAKEFILE
 echo " $OUTDIR/proprietary/lib/hw/audio.r_submix.mt6592.so:system/lib/hw/audio.r_submix.mt6592.so \\" >> $MAKEFILE
 echo " $OUTDIR/proprietary/lib/hw/audio.usb.mt6592.so:system/lib/hw/audio.usb.mt6592.so \\" >> $MAKEFILE
 echo "" >> $MAKEFILE
